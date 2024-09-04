@@ -5,6 +5,20 @@ class Urls:
     ORDERS = 'orders'
 
 
+class Responses:
+    CREATE_COURIER = {'ok': True}
+    CREATE_SAME_COURIER = "Этот логин уже используется. Попробуйте другой."
+    CREATE_COURIER_WITHOUT_FIELD = "Недостаточно данных для создания учетной записи"
+
+    LOGIN_COURIER = 'id'
+    LOGIN_COURIER_INVALID_FIELD = "Учетная запись не найдена"
+    LOGIN_COURIER_EMPTY_FIELD = "Недостаточно данных для входа"
+    LOGIN_COURIER_NOT_FOUND = "Учетная запись не найдена"
+
+    CREATE_ORDERS = 'track'
+    ORDER_LIST = 'orders'
+
+
 class OrderData:
     order_data = {
                     "firstName": "Philipp",
