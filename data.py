@@ -3,10 +3,12 @@ class Urls:
     COURIER = 'courier'
     LOGIN_COURIER = 'courier/login'
     ORDERS = 'orders'
+    ACCEPT_ORDER = 'orders/accept/'
+    ORDERS_TRACK = 'orders/track'
 
 
 class Responses:
-    CREATE_COURIER = {'ok': True}
+    OK_TRUE = {'ok': True}
     CREATE_SAME_COURIER = "Этот логин уже используется. Попробуйте другой."
     CREATE_COURIER_WITHOUT_FIELD = "Недостаточно данных для создания учетной записи"
 
@@ -17,6 +19,17 @@ class Responses:
 
     CREATE_ORDERS = 'track'
     ORDER_LIST = 'orders'
+
+    DELETE_COURIER_WITHOUT_ID = "Not Found."
+    DELETE_COURIER_INVALID_ID = "Курьера с таким id нет."
+
+    ACCEPT_ORDER_WITHOUT_ID = "Недостаточно данных для поиска"
+    ACCEPT_ORDER_INVALID_COURIER_ID = "Курьера с таким id не существует"
+    ACCEPT_ORDER_INVALID_ID = "Заказа с таким id не существует"
+    ACCEPT_ORDER_CONFLICT = "Этот заказ уже в работе"
+
+    GET_ORDER = 'order'
+    GET_ORDER_INVALID_NUMBER = "Заказ не найден"
 
 
 class OrderData:

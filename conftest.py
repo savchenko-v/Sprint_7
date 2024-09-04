@@ -4,7 +4,7 @@ from helpers import TestDataHelper
 import pytest
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture()
 def create_courier_for_login():
     data = TestDataHelper.create_courier()
     del data['firstName']

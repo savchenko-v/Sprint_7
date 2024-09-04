@@ -11,7 +11,7 @@ class TestCreateCourier:
     def test_create_courier_success(self):
         data = TestDataHelper.create_courier()
         response = requests.post(f'{Urls.BASE_URL}{Urls.COURIER}', json=data)
-        assert response.status_code == 201 and response.json() == Responses.CREATE_COURIER
+        assert response.status_code == 201 and response.json() == Responses.OK_TRUE
 
     @allure.title('Нельзя создать двух одинаковых курьеров')
     def test_create_same_courier_error(self):
